@@ -1,0 +1,32 @@
+package com.test7;
+
+public class Desk {
+   private String chair;
+   private String table;
+public String getChair() {
+	return chair;
+}
+public void setChair(String chair) {
+	this.chair = chair;
+}
+public String getTable() {
+	return table;
+}
+public void setTable(String table) {
+	this.table = table;
+}
+public Desk() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Desk(String chair, String table) {
+	super();
+	this.chair = chair;
+	this.table = table;
+}
+@Override
+public String toString() {
+	return "Desk [chair=" + chair + ", table=" + table + "]";
+}
+   
+}

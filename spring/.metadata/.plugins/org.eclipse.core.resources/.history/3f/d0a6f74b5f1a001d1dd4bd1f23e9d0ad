@@ -1,0 +1,36 @@
+package com.test7;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class Desk {
+	@Value("#{ new java.lang.String('Hello Chair') }")
+   private String chair;
+	@Value("#{ new java.lang.String('Hello Table') }")
+   private String table;
+public String getChair() {
+	return chair;
+}
+public void setChair(String chair) {
+	this.chair = chair;
+}
+public String getTable() {
+	return table;
+}
+public void setTable(String table) {
+	this.table = table;
+}
+public Desk() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Desk(String chair, String table) {
+	super();
+	this.chair = chair;
+	this.table = table;
+}
+@Override
+public String toString() {
+	return "Desk [chair=" + chair + ", table=" + table + "]";
+}
+   
+}

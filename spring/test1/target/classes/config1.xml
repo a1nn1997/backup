@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">    
+    <!-- p for schema and util for collections utility -->
+    <util:list list-class="java.util.LinkedList" id="friends">
+    <value>Bebo</value>
+    <value>Pogli Aurat</value>
+    <value>Rani</value>
+    <value>Bebso</value>
+    <value>Anjali</value>
+    </util:list>
+    
+    <util:map map-class="java.util.TreeMap" id="lang">
+   		<entry key="java" value="4 months" />
+    	<entry key="django" value="6 months" />
+    	<entry key="node js" value="2 months" />
+    	<entry key="golang" value="1 month" />
+    	<entry key="spring boot" value="7 days" />
+    </util:map>
+    
+    <util:properties id="db">
+   		<prop key="name">Poppy</prop>
+		<prop key="designation" >Bebo ka Poppy</prop>
+		<prop key="prof">Pogli Aurat ka Poppy</prop>
+		<prop key="data" >Bebso ka Poppy</prop>
+    </util:properties>
+    
+   <!--  basic creation of model-->    
+    <bean class="com.test2.Students" name="student1">
+    <!-- prop in one line -->
+    
+    <property name="name" value="ann" />
+    
+    <property name="phoneNumbers" ref="friends" />
+    <!--
+    <list>
+    	<value>1234567890</value>
+    	<value>1234567898</value>
+    	<value>1234567897</value>
+    	<value>1234567896</value>
+    </list>
+    </property>
+    -->
+    <property name="addresses" >
+    <set>
+    	<value>Delhi</value>
+    	<value>Jaipur</value>
+    	<value>Ranchi</value>
+    	<value>Ajmer</value>
+    </set>
+    </property>
+    
+    <property name="courses" ref="lang" />
+    <!--
+    <map>
+    	<entry key="java" value="4 months" />
+    	<entry key="python" value="3 months" />
+    	<entry key="node js" value="2 months" />
+    	<entry key="golang" value="1 month" />
+    </map>
+    </property>
+    -->
+    <property name="props" ref="db">
+    <!--
+ 			<props>
+				<prop key="name">Poppy</prop>
+				<prop key="designation" >Bebo ka Poppy</prop>
+			</props>
+	-->
+	
+</property>
+    
+    </bean>
+    
+    
+
+</beans>

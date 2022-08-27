@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean class="com.test4.b" name="b1" >
+    	<constructor-arg value="the pug" />
+    </bean>
+    <bean class="com.test4.a" name="a1" >
+    	<constructor-arg value="poppy" />
+    	<constructor-arg value="25" type="int" index="2"/>
+    	<constructor-arg value="2" index="1"/>
+    	<constructor-arg>
+    	<list>
+    		<value >Django</value>
+    		<value >Node js</value>
+    		<value >Spring Boot</value>
+    		<value >React</value>
+    	</list>
+    	</constructor-arg>
+    	<constructor-arg ref="b1" />
+    </bean>
+   <!--
+   <bean class="com.test4.a" name="a1" p:name="poppy" p:age="25"  p:rollNo="2" p:lang="java,python,js,go,solidity" p:obj-ref="b1"/>
+    -->
+   
+    
+    </beans>

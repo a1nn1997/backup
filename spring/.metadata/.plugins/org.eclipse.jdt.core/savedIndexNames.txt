@@ -1,0 +1,12 @@
+INDEX VERSION 1.131+/home/universal/Desktop/windows_folder/destop/spring/spring/.metadata/.plugins/org.eclipse.jdt.core
+3251974485.index
+646308851.index
+2686520393.index
+1023069802.index
+583141082.index
+1056671436.index
+1577412798.index
+3577277823.index
+195575231.index
+944581743.index
+2621808573.index

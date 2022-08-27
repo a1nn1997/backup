@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+    
+    <context:annotation-config />
+    
+   <!--  basic creation of model-->    
+    <bean class="com.test1.Student2" name="student1">
+    	<!--
+    	
+    	<property name="studentNo">
+    		<value>12345</value>
+    	</property>    	
+    	<property name="studentName">
+    		<value>poppy</value>
+    	</property>
+    	
+    	<property name="studentAddress">
+    		<value>
+    			Ajmer
+    		</value>
+    	</property>
+    -->
+    <!-- prop in one line -->
+    <property name="studentNo" value="12345" />
+    <property name="studentName" value="poppy" />
+    <property name="studentAddress" value="ajmer" />
+    
+    </bean>
+    
+    <!-- p schema shortest -->
+    <bean class="com.test1.Student" name="student2" init-method="init" destroy-method="destroy" p:studentNo ="14790" p:studentName="Pug" p:studentAddress="Ajmer"/>
+
+</beans>

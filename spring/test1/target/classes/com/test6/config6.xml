@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">    
+    
+    <context:annotation-config />
+    
+    <util:list list-class="java.util.LinkedList" id="friends">
+    <value>Bebo</value>
+    <value>Pogli Aurat</value>
+    <value>Rani</value>
+    <value>Bebso</value>
+    <value>Anjali</value>
+    </util:list>
+    
+   <context:component-scan base-package="com.test6" />
+    
+    <!-- p schema shortest -->
+    <bean class="com.test6.Student" name="student2" p:studentNo ="14790" p:studentName="Pug" p:studentAddress="Ajmer"/>
+
+</beans>
